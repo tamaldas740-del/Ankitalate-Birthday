@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Ankita 💜</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="stars"></div>
+
+    <button id="musicBtn">🎵 Music</button>
+
+    <section class="screen active" id="welcome">
+        <div class="welcome-box">
+            <p class="small-text">A little something for you...</p>
+
+            <h1>Hey, Ankita 💜</h1>
+
+            <p>
+                I made something for your birthday.
+                <br>
+                I hope it makes you smile.
+            </p>
+
+            <button class="main-btn" onclick="startJourney()">
+                Enter ✨
+            </button>
+        </div>
+    </section>
+
+
+    <section class="screen" id="birthday">
+
+        <div class="birthday-content">
+
+            <div class="cake">🎂</div>
+
+            <h1>Happy Birthday</h1>
+
+            <h2>Ankita 💜</h2>
+
+            <p class="date">14 • 08 • 09</p>
+
+            <p>
+                Today is all about celebrating you.
+            </p>
+
+            <button class="main-btn" onclick="showSection('about')">
+                Continue 🌿
+            </button>
+
+        </div>
+
+        <div id="confetti"></div>
+
+    </section>
+
+
+    <section class="screen" id="about">
+
+        <div class="section-container">
+
+            <p class="small-text">A few things about you...</p>
+
+            <h1>Things You Like ✨</h1>
+
+            <div class="cards">
+
+                <div class="card">
+                    <div class="icon">🎬</div>
+                    <h2>K-Dramas</h2>
+                    <p>
+                        For all those stories that somehow make
+                        "just one episode" turn into five.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="icon">📺</div>
+                    <h2>Reality Shows</h2>
+                    <p>
+                        Because there is always another episode
+                        worth watching.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="icon">👾</div>
+                    <h2>Series</h2>
+                    <p>
+                        Especially the kind that makes you say,
+                        "Okay, one more episode."
+                    </p>
+                </div>
+
+                <div class="card stranger-card">
+                    <div class="icon">🌌</div>
+                    <h2>Mystery & Adventure</h2>
+                    <p>
+                        A little mystery, a little chaos,
+                        and a story you can't stop watching.
+                    </p>
+                </div>
+
+            </div>
+
+            <button class="main-btn" onclick="showSection('care')">
+                There's more 💜
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <section class="screen" id="care">
+
+        <div class="section-container">
+
+            <p class="small-text">Something I wanted to say...</p>
+
+            <h1>Things I Appreciate About You 🌿</h1>
+
+            <div class="care-grid">
+
+                <div class="care-card">
+                    <span>01</span>
+                    <h2>Your Presence</h2>
+                    <p>
+                        Somehow, even ordinary moments can become
+                        more memorable when you're around.
+                    </p>
+                </div>
+
+                <div class="care-card">
+                    <span>02</span>
+                    <h2>Your Happiness</h2>
+                    <p>
+                        Seeing you happy genuinely makes me happy.
+                    </p>
+                </div>
+
+                <div class="care-card">
+                    <span>03</span>
+                    <h2>The Little Things</h2>
+                    <p>
+                        Sometimes it's the smallest conversations
+                        and moments that stay with me.
+                    </p>
+                </div>
+
+                <div class="care-card">
+                    <span>04</span>
+                    <h2>Just Being You</h2>
+                    <p>
+                        You don't have to do anything extraordinary
+                        to matter to someone.
+                    </p>
+                </div>
+
+            </div>
+
+            <button class="main-btn" onclick="showSection('game')">
+                One little surprise 🎁
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <section class="screen" id="game">
+
+        <div class="game-container">
+
+            <p class="small-text">A tiny challenge...</p>
+
+            <h1>Find the Stars ✨</h1>
+
+            <p>
+                There are 5 hidden stars around this screen.
+                <br>
+                Find them all.
+            </p>
+
+            <div id="gameArea">
+
+                <button class="star" onclick="collectStar(this)">★</button>
+                <button class="star" onclick="collectStar(this)">★</button>
+                <button class="star" onclick="collectStar(this)">★</button>
+                <button class="star" onclick="collectStar(this)">★</button>
+                <button class="star" onclick="collectStar(this)">★</button>
+
+            </div>
+
+            <p id="score">Stars found: 0 / 5</p>
+
+            <button
+                class="main-btn hidden"
+                id="finalBtn"
+                onclick="showSection('final')">
+                You found them all 💜
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <section class="screen" id="final">
+
+        <div class="final-container">
+
+            <div class="final-star">💜</div>
+
+            <p class="small-text">One last thing, Ankita...</p>
+
+            <h1>Happy Birthday 🌿</h1>
+
+            <div class="message">
+
+                <p>
+                    I don't always say it, but I genuinely care about you.
+                </p>
+
+                <p>
+                    I hope you always have people around you who make
+                    you feel appreciated, understood and happy.
+                </p>
+
+                <p>
+                    I hope this year gives you countless reasons to smile,
+                    plenty of amazing memories, and all the happiness
+                    you deserve.
+                </p>
+
+                <p>
+                    Stay the wonderful person you are.
+                </p>
+
+            </div>
+
+            <h2>Happy Birthday, Ankita 💜</h2>
+
+            <p class="signature">
+                — From someone who cares about you
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
