@@ -103,7 +103,6 @@ function createBackgroundStars() {
 
 createBackgroundStars();
 
-
 let musicPlaying = false;
 
 const musicBtn = document.getElementById("musicBtn");
@@ -116,19 +115,23 @@ function startMusic() {
             musicPlaying = true;
             musicBtn.textContent = "🔊 Music On";
         })
-        .catch(() => {
-            musicPlaying = false;
+        .catch((error) => {
+            console.log("Music could not start:", error);
         });
 }
 
 musicBtn.addEventListener("click", function() {
 
-    if (!musicPlaying) {
+    if (bgMusic.paused) {
 
-        bgMusic.play();
-
-        musicPlaying = true;
-        musicBtn.textContent = "🔊 Music On";
+        bgMusic.play()
+            .then(() => {
+                musicPlaying = true;
+                musicBtn.textContent = "🔊 Music On";
+            })
+            .catch((error) => {
+                console.log("Music could not start:", error);
+            });
 
     } else {
 
