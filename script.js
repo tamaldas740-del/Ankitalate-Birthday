@@ -19,6 +19,8 @@ function startJourney() {
     showSection("birthday");
 
     createConfetti();
+
+    startMusic();
 }
 
 function createConfetti() {
@@ -105,23 +107,34 @@ createBackgroundStars();
 let musicPlaying = false;
 
 const musicBtn = document.getElementById("musicBtn");
+const bgMusic = document.getElementById("bgMusic");
+
+function startMusic() {
+
+    bgMusic.play()
+        .then(() => {
+            musicPlaying = true;
+            musicBtn.textContent = "🔊 Music On";
+        })
+        .catch(() => {
+            musicPlaying = false;
+        });
+}
 
 musicBtn.addEventListener("click", function() {
 
     if (!musicPlaying) {
 
-        alert(
-            "Add your favourite birthday song as music.mp3 and connect it here in script.js!"
-        );
-
-        musicBtn.textContent = "🔊 Music";
+        bgMusic.play();
 
         musicPlaying = true;
+        musicBtn.textContent = "🔊 Music On";
 
     } else {
 
-        musicBtn.textContent = "🎵 Music";
+        bgMusic.pause();
 
         musicPlaying = false;
+        musicBtn.textContent = "🎵 Music";
     }
 });
